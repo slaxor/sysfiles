@@ -1,6 +1,6 @@
-[submodule "opt/rbenv"]
-	path = opt/rbenv
+[submodule "sysroot/opt/rbenv"]
+	path = sysroot/opt/rbenv
 	url = git://github.com/sstephenson/rbenv.git
-[submodule "opt/ruby-build"]
-	path = opt/ruby-build
+[submodule "sysroot/opt/ruby-build"]
+	path = sysroot/opt/ruby-build
 	url = git://github.com/sstephenson/ruby-build.git

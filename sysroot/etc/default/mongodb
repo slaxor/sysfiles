@@ -1,0 +1,11 @@
+#DAEMON_OPTS="--replSet rs0 --rest --unixSocketPrefix=$RUNDIR --config $CONF run"
+DAEMON_OPTS="--rest --unixSocketPrefix=$RUNDIR --config $CONF run"
+
+# mongodb lockfile handling seems realy poor
+LOCKFILE=/var/lib/mongodb/mongod.lock
+if [ -f $LOCKFILE ] && [ $(pgrep --pidfile $LOCKFILE mongod >/dev/null ; echo $?) -eq 1 ]
+then
+  rm -f $LOCKFILE
+fi
+unset LOCKFILE
+
